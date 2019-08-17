@@ -5,7 +5,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
   themeConfig: {
-    repo: 'songmengda/blog/docs',
+    repo: 'songmengda/blog/',
     lastUpdated: '上次更新时间',
     nav: [ // 头部导航
       { text: '文档1', link: '/' }, //普通格式的导航
