@@ -4,13 +4,27 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
+  base: '/blog.github.io/',
   themeConfig: {
-    repo: 'songmengda/blog/',
+    repo: 'https://github.com/songmengda',
     lastUpdated: '上次更新时间',
     nav: [ // 头部导航
-      { text: '文档1', link: '/' }, //普通格式的导航
-      { text: '文档2', link: '/guide/' },
-      { text: '文档3', link: 'https://google.com' },
+      {
+        text: '前端总结',
+        items: [
+          { text: 'ES6', link: '/es6/' }, //普通格式的导航
+          { text: 'webpack', link: '/webpack/' }
+        ]
+      },
+      {
+        text: '个人兴趣',
+        items: [
+          { text: '历史事件', link: '/story/战争/01中越' }, //普通格式的导航
+        ]
+      },
+      // { text: 'ES6', link: '/es6/' }, //普通格式的导航
+      { text: 'MD入门', link: '/markdown/' },
+      { text: 'css', link: '/css/' },
       {
         text: '文档4',
         items: [ //列表形式的导航
@@ -50,17 +64,46 @@ module.exports = {
         'css1',
         'css2'
       ],
-
       '/es6/': [
         '',
-        'es6-1',
-        'es6-2'
+        'es6-1.let&const',
+        'es6-2.解构赋值',
+        'es6-3.字符串',
+        'es6-4.正则表达式',
+        'es6-5.数值',
+        'es6-6.函数',
+        'es6-7.数组',
+        'es6-8.对象',
+        'es6-9.Symbol',
+        'es6-10.Set和Map',
+        'es6-11.Proxy',
+        'es6-12.Reflect',
+        'es6-13.Promise',
+        'es6-14.Generator函数',
+        'es6-15.async函数',
+        'es6-16.Class语法'
       ],
-
+      '/webpack/': [
+        '',
+        '01认识webpack',
+        '02构建工具的发展历史',
+        '03安装与使用入门',
+        '04配置-Entry'
+      ],
+      '/story/战争/': [
+        '01中越'
+      ],
+      '/markdown/': [
+        ''
+      ],
+      '/about/': [
+        '',
+      ],
       // fallback
       '/': [
         '', /* / */
-      ]
+      ],
+
     },
     // locales: {
     //   // 作为特例，默认语言可以使用 '/' 作为其路径。
@@ -70,6 +113,6 @@ module.exports = {
     // }
   },
   markdown: {
-    lineNumbers: true
+    // lineNumbers: true
   }
 }
